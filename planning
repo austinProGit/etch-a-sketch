@@ -1,0 +1,31 @@
+General description/user story/features:
+The user will be presented with a square. Inside the square will be a grid of squares (will need to be equal num w and l). The user will be able to click on a square, and the square will change colors. If the user drags the cursor with mouse clicked (held down), each subsequent square that the cursor passes over will have its color chnaged.
+
+There will be a reset button that will clear the sketch.
+
+The will be varying shades of color (from lightest to darkest), corresponding with the number of clicks or hover overs with mouse down. 
+
+Implementation:
+There will be a sketch object that has a gridWith that is input by the user. Max 100
+
+Width of each square will be a portion of a fixed width. Maybe achievable through flexbox.
+
+Each square will need to be an object that has a currentColor (or opacity/shade?). Each will need an event listener (delegate to container).
+
+This approach ^^^ may not be efficient. Perhaps possible to use a single array whose length is defined at run time to store a representation of the squares (top left to bottom right)({0: currentColor, 2: currentColor, ...})
+
+If the array approach is taken, then the sketch object will need some CRUD methods etc.
+
+Additional features after working prototype:
+
+Multiple sketch feature
+
+Save multiple sketch feature
+
+Multiple colors with a color picker
+
+Undo functionality
+
+The hardest part about this will be the creation of the grid using flexbox. I am gonna take the approach of using userInput to determine num row divs, then fill each div with userInput num of squares.
+
+CSS thoughts: maybe aspect-ratio will make the squares more flexible.
